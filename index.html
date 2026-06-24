@@ -33,40 +33,6 @@ body {
 }
 
 /* ─── SCROLLBAR ─── */
-/* ─── FORM OVERLAY ─── */
-  #form-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-  }
-  #form-box {
-    background: #fdfaf5;
-    width: 90%;
-    max-width: 680px;
-    max-height: 90vh;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-  #form-close {
-    position: absolute;
-    top: 12px; right: 16px;
-    font-size: 22px;
-    cursor: pointer;
-    color: #1a2e1f;
-    z-index: 10;
-    background: none;
-    border: none;
-  }
-  #form-box iframe {
-    width: 100%;
-    height: 85vh;
-    border: none;
-  }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--cream); }
@@ -886,7 +852,7 @@ footer {
     <li><a href="#all-therapies">All Treatments</a></li>
     <li><a href="#specialities">Specialities</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="tel:+919897913123" class="nav-cta">Book Now</a></li>
+    <li><a href="https://wa.me/919897913123?text=Namaste%20%F0%9F%99%8F%20I%20would%20like%20to%20book%20a%20consultation%20at%20Beyond%20Ayurveda." target="_blank" class="nav-cta">Book Now</a></li>
   </ul>
 </nav>
 
@@ -902,7 +868,7 @@ footer {
     <p class="hero-sub">Where ancient Panchakarma wisdom meets modern healing — nestled in the lap of the Himalayas.</p>
     <div class="hero-tagline">Heal · Detox · Renew</div>
     <div class="hero-btns">
-      <a href="tel:+919897913123" class="btn-primary">Book Consultation</a>
+      <a href="https://wa.me/919897913123?text=Namaste%20%F0%9F%99%8F%20I%20would%20like%20to%20book%20a%20consultation%20at%20Beyond%20Ayurveda." target="_blank" class="btn-primary">Book Consultation</a>
       <a href="#therapies" class="btn-secondary">Our Therapies</a>
     </div>
   </div>
@@ -1292,13 +1258,7 @@ footer {
   <div class="footer-copy">© 2026 Beyond Ayurveda · Dehradun · All rights reserved</div>
 </footer>
 
-<!-- ══════════════════════════════ FORM OVERLAY ══════════════════════════════ -->
-<div id="form-overlay" onclick="if(event.target===this) closeForm()">
-  <div id="form-box">
-    <button id="form-close" onclick="closeForm()">✕</button>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXgiZhFqI1U3Vq04hJy4MhZLjU4PRQKxg10REu80ap8rfATA/viewform?embedded=true"></iframe>
-  </div>
-</div>
+
 
 <script>
 // Scroll animations
@@ -1318,17 +1278,7 @@ window.addEventListener('scroll', () => {
   nav.style.boxShadow = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.08)' : 'none';
 });
 
-// Book Appointment form modal
-function closeForm() {
-  document.getElementById('form-overlay').style.display = 'none';
-}
 
-document.querySelectorAll('a.nav-cta, a[href="#book"], a.btn-primary').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('form-overlay').style.display = 'flex';
-  });
-});
 </script>
 </body>
 </html>
